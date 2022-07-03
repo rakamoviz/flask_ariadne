@@ -1,0 +1,30 @@
+python -m webserver
+http://localhost:5000/graphql
+
+mutation
+========
+mutation RegisterUser($input: RegisterUserInput!) {
+  registerUser(input: $input)
+}
+
+{
+  "input": {
+    "name": "Raka",
+    "email": "Hebat"
+  }
+}
+
+query
+=====
+query {
+  users {
+    name
+  }
+}# Write your query or mutation here
+
+query {
+  user(id: "2") {
+    name
+  }
+}# Write your query or mutation here
+

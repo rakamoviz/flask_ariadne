@@ -9,15 +9,11 @@ from webserver.containers import Application as ApplicationContainer
 from webserver.types import User
 from webserver import queries as queries_module
 
-
-print(queries)
-schema = make_executable_schema(*types, *queries, *mutations)
-
 app_container = ApplicationContainer()
-app_container.wire(modules=[__name__, queries_module])
 app = Flask(__name__)
 app.container = app_container
 
+schema = make_executable_schema(*types, *queries, *mutations)
 
 @app.route("/graphql", methods=["GET"])
 def graphql_playground():

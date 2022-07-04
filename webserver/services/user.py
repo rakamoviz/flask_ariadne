@@ -2,7 +2,7 @@ from webserver.models import User as UserModel
 
 class User:
   def __init__(self):
-    print("HAHAHA")
+    pass
 
   def get_user(self, id):
     if id == "1":

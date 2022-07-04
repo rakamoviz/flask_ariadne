@@ -28,8 +28,6 @@ class RegisterUser(MutationType):
     @staticmethod
     @inject
     async def resolve_mutation(*_, input: dict, user_service: UserService = Provide[ApplicationContainer.user]):
-        print("yes", input)
-
         user = await user_service.create_user(
             name=input["name"],
             email=input["email"],

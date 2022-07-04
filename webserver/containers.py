@@ -17,6 +17,3 @@ class Application(containers.DeclarativeContainer):
     user = providers.Factory(
         UserService,
     )
-
-    print("?????", user)
-

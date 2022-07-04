@@ -12,7 +12,6 @@ class MyQuery:
     @staticmethod
     @inject
     def resolve_email(name: str, cupu_service: PhotoService = Provide[Application.services.cupu]):
-        print(cupu_service)
         cupu_service.hello(name)
 
 

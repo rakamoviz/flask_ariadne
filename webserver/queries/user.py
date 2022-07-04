@@ -26,7 +26,6 @@ class User(ObjectType):
     @staticmethod
     @inject
     def resolve_users(*_, user_service: UserService = Provide[ApplicationContainer.user]) -> List[UserModel]:
-        print(">>>", user_service)
         return user_service.get_last_users()
 
 

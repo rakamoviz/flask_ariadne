@@ -28,3 +28,11 @@ query {
   }
 }# Write your query or mutation here
 
+query {
+  year
+}# Write your query or mutation here
+
+query {
+  message
+}# Write your query or mutation here
+

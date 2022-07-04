@@ -9,7 +9,7 @@ from webserver.services import User as UserService
 class Application(containers.DeclarativeContainer):
 
     wiring_config = containers.WiringConfiguration(
-        modules=["webserver.queries.user", "webserver.mutations.register_user"] # or "users" in your case
+        packages=["webserver.queries", "webserver.mutations"]
     )
 
     config = providers.Configuration()
